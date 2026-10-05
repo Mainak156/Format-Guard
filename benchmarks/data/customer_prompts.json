@@ -1,0 +1,2402 @@
+[
+  {
+    "id": "FG-001",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Aarav Mehta is 28 years old and works as Data Analyst at Northstar Analytics. Their email is aarav.mehta@example.com.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-002",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Priya Sharma, age 32, employed by BluePeak Systems as a Product Manager. Contact email: priya.sharma@example.com.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-003",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Rohan Das, 26, Software Engineer, Vertex Labs, rohan.das@example.com.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-004",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Ananya Roy. Age: 30. Email: ananya.roy@example.com. Company: CloudBridge Technologies. Position: Solutions Architect.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-005",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Vikram Singh is 35 years old and works as Sales Director at Apex Consulting. Their email is vikram.singh@example.com.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-006",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Sneha Iyer, age 27, employed by FinEdge as a Business Analyst. Contact email: sneha.iyer@example.com.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-007",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Arjun Nair, 31, Operations Manager, GreenGrid Energy, arjun.nair@example.com.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-008",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Meera Kapoor. Age: 29. Email: meera.kapoor@example.com. Company: PixelWorks. Position: UX Designer.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-009",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Karan Malhotra is 34 years old and works as Security Engineer at SecureNet. Their email is karan.malhotra@example.com.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-010",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Ishita Sen, age 25, employed by EduSphere as a Program Coordinator. Contact email: ishita.sen@example.com.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-011",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Aarav Mehta, 28, Data Analyst, Northstar Analytics, aarav.mehta@example.com.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-012",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Priya Sharma. Age: 32. Email: priya.sharma@example.com. Company: BluePeak Systems. Position: Product Manager.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-013",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Rohan Das is 26 years old and works as Software Engineer at Vertex Labs. Their email is rohan.das@example.com.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-014",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Ananya Roy, age 30, employed by CloudBridge Technologies as a Solutions Architect. Contact email: ananya.roy@example.com.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-015",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Vikram Singh, 35, Sales Director, Apex Consulting, vikram.singh@example.com.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-016",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Sneha Iyer. Age: 27. Email: sneha.iyer@example.com. Company: FinEdge. Position: Business Analyst.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-017",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Arjun Nair is 31 years old and works as Operations Manager at GreenGrid Energy. Their email is arjun.nair@example.com.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-018",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Meera Kapoor, age 29, employed by PixelWorks as a UX Designer. Contact email: meera.kapoor@example.com.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-019",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Karan Malhotra, 34, Security Engineer, SecureNet, karan.malhotra@example.com.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-020",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Ishita Sen. Age: 25. Email: ishita.sen@example.com. Company: EduSphere. Position: Program Coordinator.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-021",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Aarav Mehta is 28 years old and works as Data Analyst at Northstar Analytics. Their email is aarav.mehta@example.com.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-022",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Priya Sharma, age 32, employed by BluePeak Systems as a Product Manager. Contact email: priya.sharma@example.com.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-023",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Rohan Das, 26, Software Engineer, Vertex Labs, rohan.das@example.com.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-024",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Ananya Roy. Age: 30. Email: ananya.roy@example.com. Company: CloudBridge Technologies. Position: Solutions Architect.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-025",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Vikram Singh is 35 years old and works as Sales Director at Apex Consulting. Their email is vikram.singh@example.com.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-026",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Sneha Iyer, age 27, employed by FinEdge as a Business Analyst. Contact email: sneha.iyer@example.com.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-027",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Arjun Nair, 31, Operations Manager, GreenGrid Energy, arjun.nair@example.com.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-028",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Meera Kapoor. Age: 29. Email: meera.kapoor@example.com. Company: PixelWorks. Position: UX Designer.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-029",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Karan Malhotra is 34 years old and works as Security Engineer at SecureNet. Their email is karan.malhotra@example.com.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-030",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Ishita Sen, age 25, employed by EduSphere as a Program Coordinator. Contact email: ishita.sen@example.com.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-031",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Aarav Mehta, 28, Data Analyst, Northstar Analytics, aarav.mehta@example.com.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-032",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Priya Sharma. Age: 32. Email: priya.sharma@example.com. Company: BluePeak Systems. Position: Product Manager.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-033",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Rohan Das is 26 years old and works as Software Engineer at Vertex Labs. Their email is rohan.das@example.com.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-034",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Ananya Roy, age 30, employed by CloudBridge Technologies as a Solutions Architect. Contact email: ananya.roy@example.com.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-035",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Vikram Singh, 35, Sales Director, Apex Consulting, vikram.singh@example.com.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-036",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Sneha Iyer. Age: 27. Email: sneha.iyer@example.com. Company: FinEdge. Position: Business Analyst.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-037",
+    "category": "crm",
+    "prompt": "Update the CRM record from this customer note: Arjun Nair is 31 years old and works as Operations Manager at GreenGrid Energy. Their email is arjun.nair@example.com.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-038",
+    "category": "crm",
+    "prompt": "A customer profile needs to be entered into our system. The contact is Meera Kapoor, age 29, employed by PixelWorks as a UX Designer. Contact email: meera.kapoor@example.com.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-039",
+    "category": "crm",
+    "prompt": "Convert this CRM note into the requested customer information: Karan Malhotra, 34, Security Engineer, SecureNet, karan.malhotra@example.com.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-040",
+    "category": "crm",
+    "prompt": "The account manager recorded the following details. Identify the customer's name, age, email, company and role. Customer: Ishita Sen. Age: 25. Email: ishita.sen@example.com. Company: EduSphere. Position: Program Coordinator.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-041",
+    "category": "support",
+    "prompt": "A support ticket was opened by Aarav Mehta, a Data Analyst at Northstar Analytics. The customer is 28 years old and can be reached at aarav.mehta@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-042",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Priya Sharma; requester_age=32; organization=BluePeak Systems; job_title=Product Manager; contact=priya.sharma@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-043",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Rohan Das (Software Engineer, Vertex Labs) is 26. Email: rohan.das@example.com.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-044",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Ananya Roy. They work at CloudBridge Technologies as a Solutions Architect, are 30, and use ananya.roy@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-045",
+    "category": "support",
+    "prompt": "A support ticket was opened by Vikram Singh, a Sales Director at Apex Consulting. The customer is 35 years old and can be reached at vikram.singh@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-046",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Sneha Iyer; requester_age=27; organization=FinEdge; job_title=Business Analyst; contact=sneha.iyer@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-047",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Arjun Nair (Operations Manager, GreenGrid Energy) is 31. Email: arjun.nair@example.com.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-048",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Meera Kapoor. They work at PixelWorks as a UX Designer, are 29, and use meera.kapoor@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-049",
+    "category": "support",
+    "prompt": "A support ticket was opened by Karan Malhotra, a Security Engineer at SecureNet. The customer is 34 years old and can be reached at karan.malhotra@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-050",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Ishita Sen; requester_age=25; organization=EduSphere; job_title=Program Coordinator; contact=ishita.sen@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-051",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Aarav Mehta (Data Analyst, Northstar Analytics) is 28. Email: aarav.mehta@example.com.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-052",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Priya Sharma. They work at BluePeak Systems as a Product Manager, are 32, and use priya.sharma@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-053",
+    "category": "support",
+    "prompt": "A support ticket was opened by Rohan Das, a Software Engineer at Vertex Labs. The customer is 26 years old and can be reached at rohan.das@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-054",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Ananya Roy; requester_age=30; organization=CloudBridge Technologies; job_title=Solutions Architect; contact=ananya.roy@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-055",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Vikram Singh (Sales Director, Apex Consulting) is 35. Email: vikram.singh@example.com.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-056",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Sneha Iyer. They work at FinEdge as a Business Analyst, are 27, and use sneha.iyer@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-057",
+    "category": "support",
+    "prompt": "A support ticket was opened by Arjun Nair, a Operations Manager at GreenGrid Energy. The customer is 31 years old and can be reached at arjun.nair@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-058",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Meera Kapoor; requester_age=29; organization=PixelWorks; job_title=UX Designer; contact=meera.kapoor@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-059",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Karan Malhotra (Security Engineer, SecureNet) is 34. Email: karan.malhotra@example.com.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-060",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Ishita Sen. They work at EduSphere as a Program Coordinator, are 25, and use ishita.sen@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-061",
+    "category": "support",
+    "prompt": "A support ticket was opened by Aarav Mehta, a Data Analyst at Northstar Analytics. The customer is 28 years old and can be reached at aarav.mehta@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-062",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Priya Sharma; requester_age=32; organization=BluePeak Systems; job_title=Product Manager; contact=priya.sharma@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-063",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Rohan Das (Software Engineer, Vertex Labs) is 26. Email: rohan.das@example.com.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-064",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Ananya Roy. They work at CloudBridge Technologies as a Solutions Architect, are 30, and use ananya.roy@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-065",
+    "category": "support",
+    "prompt": "A support ticket was opened by Vikram Singh, a Sales Director at Apex Consulting. The customer is 35 years old and can be reached at vikram.singh@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-066",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Sneha Iyer; requester_age=27; organization=FinEdge; job_title=Business Analyst; contact=sneha.iyer@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-067",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Arjun Nair (Operations Manager, GreenGrid Energy) is 31. Email: arjun.nair@example.com.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-068",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Meera Kapoor. They work at PixelWorks as a UX Designer, are 29, and use meera.kapoor@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-069",
+    "category": "support",
+    "prompt": "A support ticket was opened by Karan Malhotra, a Security Engineer at SecureNet. The customer is 34 years old and can be reached at karan.malhotra@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-070",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Ishita Sen; requester_age=25; organization=EduSphere; job_title=Program Coordinator; contact=ishita.sen@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-071",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Aarav Mehta (Data Analyst, Northstar Analytics) is 28. Email: aarav.mehta@example.com.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-072",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Priya Sharma. They work at BluePeak Systems as a Product Manager, are 32, and use priya.sharma@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-073",
+    "category": "support",
+    "prompt": "A support ticket was opened by Rohan Das, a Software Engineer at Vertex Labs. The customer is 26 years old and can be reached at rohan.das@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-074",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Ananya Roy; requester_age=30; organization=CloudBridge Technologies; job_title=Solutions Architect; contact=ananya.roy@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-075",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Vikram Singh (Sales Director, Apex Consulting) is 35. Email: vikram.singh@example.com.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-076",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Sneha Iyer. They work at FinEdge as a Business Analyst, are 27, and use sneha.iyer@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-077",
+    "category": "support",
+    "prompt": "A support ticket was opened by Arjun Nair, a Operations Manager at GreenGrid Energy. The customer is 31 years old and can be reached at arjun.nair@example.com. Extract the customer details.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-078",
+    "category": "support",
+    "prompt": "Support case metadata: requester=Meera Kapoor; requester_age=29; organization=PixelWorks; job_title=UX Designer; contact=meera.kapoor@example.com. Prepare the customer record.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-079",
+    "category": "support",
+    "prompt": "Summarize the identity details from this support request. Karan Malhotra (Security Engineer, SecureNet) is 34. Email: karan.malhotra@example.com.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-080",
+    "category": "support",
+    "prompt": "The following customer contacted technical support: Ishita Sen. They work at EduSphere as a Program Coordinator, are 25, and use ishita.sen@example.com. Extract the structured customer data.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-081",
+    "category": "sales",
+    "prompt": "Sales lead information: Aarav Mehta, 28, Data Analyst at Northstar Analytics. Email address: aarav.mehta@example.com. Create the lead record.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-082",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Priya Sharma works for BluePeak Systems as a Product Manager. They are 32 years old and their email is priya.sharma@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-083",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Rohan Das, age 26, Vertex Labs, Software Engineer, rohan.das@example.com.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-084",
+    "category": "sales",
+    "prompt": "New business contact: Ananya Roy | Solutions Architect | CloudBridge Technologies | 30 | ananya.roy@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-085",
+    "category": "sales",
+    "prompt": "Sales lead information: Vikram Singh, 35, Sales Director at Apex Consulting. Email address: vikram.singh@example.com. Create the lead record.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-086",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Sneha Iyer works for FinEdge as a Business Analyst. They are 27 years old and their email is sneha.iyer@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-087",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Arjun Nair, age 31, GreenGrid Energy, Operations Manager, arjun.nair@example.com.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-088",
+    "category": "sales",
+    "prompt": "New business contact: Meera Kapoor | UX Designer | PixelWorks | 29 | meera.kapoor@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-089",
+    "category": "sales",
+    "prompt": "Sales lead information: Karan Malhotra, 34, Security Engineer at SecureNet. Email address: karan.malhotra@example.com. Create the lead record.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-090",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Ishita Sen works for EduSphere as a Program Coordinator. They are 25 years old and their email is ishita.sen@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-091",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Aarav Mehta, age 28, Northstar Analytics, Data Analyst, aarav.mehta@example.com.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-092",
+    "category": "sales",
+    "prompt": "New business contact: Priya Sharma | Product Manager | BluePeak Systems | 32 | priya.sharma@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-093",
+    "category": "sales",
+    "prompt": "Sales lead information: Rohan Das, 26, Software Engineer at Vertex Labs. Email address: rohan.das@example.com. Create the lead record.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-094",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Ananya Roy works for CloudBridge Technologies as a Solutions Architect. They are 30 years old and their email is ananya.roy@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-095",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Vikram Singh, age 35, Apex Consulting, Sales Director, vikram.singh@example.com.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-096",
+    "category": "sales",
+    "prompt": "New business contact: Sneha Iyer | Business Analyst | FinEdge | 27 | sneha.iyer@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-097",
+    "category": "sales",
+    "prompt": "Sales lead information: Arjun Nair, 31, Operations Manager at GreenGrid Energy. Email address: arjun.nair@example.com. Create the lead record.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-098",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Meera Kapoor works for PixelWorks as a UX Designer. They are 29 years old and their email is meera.kapoor@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-099",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Karan Malhotra, age 34, SecureNet, Security Engineer, karan.malhotra@example.com.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-100",
+    "category": "sales",
+    "prompt": "New business contact: Ishita Sen | Program Coordinator | EduSphere | 25 | ishita.sen@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-101",
+    "category": "sales",
+    "prompt": "Sales lead information: Aarav Mehta, 28, Data Analyst at Northstar Analytics. Email address: aarav.mehta@example.com. Create the lead record.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-102",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Priya Sharma works for BluePeak Systems as a Product Manager. They are 32 years old and their email is priya.sharma@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-103",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Rohan Das, age 26, Vertex Labs, Software Engineer, rohan.das@example.com.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-104",
+    "category": "sales",
+    "prompt": "New business contact: Ananya Roy | Solutions Architect | CloudBridge Technologies | 30 | ananya.roy@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-105",
+    "category": "sales",
+    "prompt": "Sales lead information: Vikram Singh, 35, Sales Director at Apex Consulting. Email address: vikram.singh@example.com. Create the lead record.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-106",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Sneha Iyer works for FinEdge as a Business Analyst. They are 27 years old and their email is sneha.iyer@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-107",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Arjun Nair, age 31, GreenGrid Energy, Operations Manager, arjun.nair@example.com.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-108",
+    "category": "sales",
+    "prompt": "New business contact: Meera Kapoor | UX Designer | PixelWorks | 29 | meera.kapoor@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-109",
+    "category": "sales",
+    "prompt": "Sales lead information: Karan Malhotra, 34, Security Engineer at SecureNet. Email address: karan.malhotra@example.com. Create the lead record.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-110",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Ishita Sen works for EduSphere as a Program Coordinator. They are 25 years old and their email is ishita.sen@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-111",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Aarav Mehta, age 28, Northstar Analytics, Data Analyst, aarav.mehta@example.com.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-112",
+    "category": "sales",
+    "prompt": "New business contact: Priya Sharma | Product Manager | BluePeak Systems | 32 | priya.sharma@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-113",
+    "category": "sales",
+    "prompt": "Sales lead information: Rohan Das, 26, Software Engineer at Vertex Labs. Email address: rohan.das@example.com. Create the lead record.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-114",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Ananya Roy works for CloudBridge Technologies as a Solutions Architect. They are 30 years old and their email is ananya.roy@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-115",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Vikram Singh, age 35, Apex Consulting, Sales Director, vikram.singh@example.com.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-116",
+    "category": "sales",
+    "prompt": "New business contact: Sneha Iyer | Business Analyst | FinEdge | 27 | sneha.iyer@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-117",
+    "category": "sales",
+    "prompt": "Sales lead information: Arjun Nair, 31, Operations Manager at GreenGrid Energy. Email address: arjun.nair@example.com. Create the lead record.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-118",
+    "category": "sales",
+    "prompt": "A salesperson entered this lead into the notes: Meera Kapoor works for PixelWorks as a UX Designer. They are 29 years old and their email is meera.kapoor@example.com. Extract the relevant fields.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-119",
+    "category": "sales",
+    "prompt": "Turn this prospect description into customer information: Karan Malhotra, age 34, SecureNet, Security Engineer, karan.malhotra@example.com.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-120",
+    "category": "sales",
+    "prompt": "New business contact: Ishita Sen | Program Coordinator | EduSphere | 25 | ishita.sen@example.com. Prepare the structured record.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-121",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Aarav Mehta, who is 28 and works at Northstar Analytics as a Data Analyst. Their contact address is aarav.mehta@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-122",
+    "category": "meeting",
+    "prompt": "During today's meeting, Priya Sharma introduced themselves as a Product Manager from BluePeak Systems. Their age is 32 and their email is priya.sharma@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-123",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Rohan Das, Software Engineer, Vertex Labs, age 26, email rohan.das@example.com. Extract the record.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-124",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Ananya Roy (30), Solutions Architect at CloudBridge Technologies, ananya.roy@example.com.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-125",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Vikram Singh, who is 35 and works at Apex Consulting as a Sales Director. Their contact address is vikram.singh@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-126",
+    "category": "meeting",
+    "prompt": "During today's meeting, Sneha Iyer introduced themselves as a Business Analyst from FinEdge. Their age is 27 and their email is sneha.iyer@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-127",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Arjun Nair, Operations Manager, GreenGrid Energy, age 31, email arjun.nair@example.com. Extract the record.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-128",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Meera Kapoor (29), UX Designer at PixelWorks, meera.kapoor@example.com.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-129",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Karan Malhotra, who is 34 and works at SecureNet as a Security Engineer. Their contact address is karan.malhotra@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-130",
+    "category": "meeting",
+    "prompt": "During today's meeting, Ishita Sen introduced themselves as a Program Coordinator from EduSphere. Their age is 25 and their email is ishita.sen@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-131",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Aarav Mehta, Data Analyst, Northstar Analytics, age 28, email aarav.mehta@example.com. Extract the record.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-132",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Priya Sharma (32), Product Manager at BluePeak Systems, priya.sharma@example.com.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-133",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Rohan Das, who is 26 and works at Vertex Labs as a Software Engineer. Their contact address is rohan.das@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-134",
+    "category": "meeting",
+    "prompt": "During today's meeting, Ananya Roy introduced themselves as a Solutions Architect from CloudBridge Technologies. Their age is 30 and their email is ananya.roy@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-135",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Vikram Singh, Sales Director, Apex Consulting, age 35, email vikram.singh@example.com. Extract the record.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-136",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Sneha Iyer (27), Business Analyst at FinEdge, sneha.iyer@example.com.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-137",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Arjun Nair, who is 31 and works at GreenGrid Energy as a Operations Manager. Their contact address is arjun.nair@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-138",
+    "category": "meeting",
+    "prompt": "During today's meeting, Meera Kapoor introduced themselves as a UX Designer from PixelWorks. Their age is 29 and their email is meera.kapoor@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-139",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Karan Malhotra, Security Engineer, SecureNet, age 34, email karan.malhotra@example.com. Extract the record.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-140",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Ishita Sen (25), Program Coordinator at EduSphere, ishita.sen@example.com.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-141",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Aarav Mehta, who is 28 and works at Northstar Analytics as a Data Analyst. Their contact address is aarav.mehta@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-142",
+    "category": "meeting",
+    "prompt": "During today's meeting, Priya Sharma introduced themselves as a Product Manager from BluePeak Systems. Their age is 32 and their email is priya.sharma@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-143",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Rohan Das, Software Engineer, Vertex Labs, age 26, email rohan.das@example.com. Extract the record.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-144",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Ananya Roy (30), Solutions Architect at CloudBridge Technologies, ananya.roy@example.com.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-145",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Vikram Singh, who is 35 and works at Apex Consulting as a Sales Director. Their contact address is vikram.singh@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-146",
+    "category": "meeting",
+    "prompt": "During today's meeting, Sneha Iyer introduced themselves as a Business Analyst from FinEdge. Their age is 27 and their email is sneha.iyer@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-147",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Arjun Nair, Operations Manager, GreenGrid Energy, age 31, email arjun.nair@example.com. Extract the record.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-148",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Meera Kapoor (29), UX Designer at PixelWorks, meera.kapoor@example.com.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-149",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Karan Malhotra, who is 34 and works at SecureNet as a Security Engineer. Their contact address is karan.malhotra@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-150",
+    "category": "meeting",
+    "prompt": "During today's meeting, Ishita Sen introduced themselves as a Program Coordinator from EduSphere. Their age is 25 and their email is ishita.sen@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-151",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Aarav Mehta, Data Analyst, Northstar Analytics, age 28, email aarav.mehta@example.com. Extract the record.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-152",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Priya Sharma (32), Product Manager at BluePeak Systems, priya.sharma@example.com.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-153",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Rohan Das, who is 26 and works at Vertex Labs as a Software Engineer. Their contact address is rohan.das@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-154",
+    "category": "meeting",
+    "prompt": "During today's meeting, Ananya Roy introduced themselves as a Solutions Architect from CloudBridge Technologies. Their age is 30 and their email is ananya.roy@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-155",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Vikram Singh, Sales Director, Apex Consulting, age 35, email vikram.singh@example.com. Extract the record.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-156",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Sneha Iyer (27), Business Analyst at FinEdge, sneha.iyer@example.com.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-157",
+    "category": "meeting",
+    "prompt": "Meeting notes mention Arjun Nair, who is 31 and works at GreenGrid Energy as a Operations Manager. Their contact address is arjun.nair@example.com. Extract the person's details.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-158",
+    "category": "meeting",
+    "prompt": "During today's meeting, Meera Kapoor introduced themselves as a UX Designer from PixelWorks. Their age is 29 and their email is meera.kapoor@example.com. Convert this into structured information.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-159",
+    "category": "meeting",
+    "prompt": "Participant details from the meeting: Karan Malhotra, Security Engineer, SecureNet, age 34, email karan.malhotra@example.com. Extract the record.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-160",
+    "category": "meeting",
+    "prompt": "Identify the attendee information in these notes: Ishita Sen (25), Program Coordinator at EduSphere, ishita.sen@example.com.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-161",
+    "category": "onboarding",
+    "prompt": "During onboarding, Aarav Mehta provided their contact details. They are 28, work as a Data Analyst at Northstar Analytics, and use aarav.mehta@example.com. Create the customer record.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-162",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Priya Sharma; Age: 32; Company: BluePeak Systems; Role: Product Manager; Email: priya.sharma@example.com. Extract the fields.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-163",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Rohan Das is a Software Engineer at Vertex Labs. Their age is 26 and their email is rohan.das@example.com. Return the requested information.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-164",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Ananya Roy, 30, ananya.roy@example.com, CloudBridge Technologies, Solutions Architect. Produce the customer details.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-165",
+    "category": "onboarding",
+    "prompt": "During onboarding, Vikram Singh provided their contact details. They are 35, work as a Sales Director at Apex Consulting, and use vikram.singh@example.com. Create the customer record.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-166",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Sneha Iyer; Age: 27; Company: FinEdge; Role: Business Analyst; Email: sneha.iyer@example.com. Extract the fields.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-167",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Arjun Nair is a Operations Manager at GreenGrid Energy. Their age is 31 and their email is arjun.nair@example.com. Return the requested information.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-168",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Meera Kapoor, 29, meera.kapoor@example.com, PixelWorks, UX Designer. Produce the customer details.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-169",
+    "category": "onboarding",
+    "prompt": "During onboarding, Karan Malhotra provided their contact details. They are 34, work as a Security Engineer at SecureNet, and use karan.malhotra@example.com. Create the customer record.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-170",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Ishita Sen; Age: 25; Company: EduSphere; Role: Program Coordinator; Email: ishita.sen@example.com. Extract the fields.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-171",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Aarav Mehta is a Data Analyst at Northstar Analytics. Their age is 28 and their email is aarav.mehta@example.com. Return the requested information.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-172",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Priya Sharma, 32, priya.sharma@example.com, BluePeak Systems, Product Manager. Produce the customer details.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-173",
+    "category": "onboarding",
+    "prompt": "During onboarding, Rohan Das provided their contact details. They are 26, work as a Software Engineer at Vertex Labs, and use rohan.das@example.com. Create the customer record.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-174",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Ananya Roy; Age: 30; Company: CloudBridge Technologies; Role: Solutions Architect; Email: ananya.roy@example.com. Extract the fields.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-175",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Vikram Singh is a Sales Director at Apex Consulting. Their age is 35 and their email is vikram.singh@example.com. Return the requested information.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-176",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Sneha Iyer, 27, sneha.iyer@example.com, FinEdge, Business Analyst. Produce the customer details.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-177",
+    "category": "onboarding",
+    "prompt": "During onboarding, Arjun Nair provided their contact details. They are 31, work as a Operations Manager at GreenGrid Energy, and use arjun.nair@example.com. Create the customer record.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-178",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Meera Kapoor; Age: 29; Company: PixelWorks; Role: UX Designer; Email: meera.kapoor@example.com. Extract the fields.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-179",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Karan Malhotra is a Security Engineer at SecureNet. Their age is 34 and their email is karan.malhotra@example.com. Return the requested information.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-180",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Ishita Sen, 25, ishita.sen@example.com, EduSphere, Program Coordinator. Produce the customer details.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-181",
+    "category": "onboarding",
+    "prompt": "During onboarding, Aarav Mehta provided their contact details. They are 28, work as a Data Analyst at Northstar Analytics, and use aarav.mehta@example.com. Create the customer record.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-182",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Priya Sharma; Age: 32; Company: BluePeak Systems; Role: Product Manager; Email: priya.sharma@example.com. Extract the fields.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-183",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Rohan Das is a Software Engineer at Vertex Labs. Their age is 26 and their email is rohan.das@example.com. Return the requested information.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-184",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Ananya Roy, 30, ananya.roy@example.com, CloudBridge Technologies, Solutions Architect. Produce the customer details.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-185",
+    "category": "onboarding",
+    "prompt": "During onboarding, Vikram Singh provided their contact details. They are 35, work as a Sales Director at Apex Consulting, and use vikram.singh@example.com. Create the customer record.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-186",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Sneha Iyer; Age: 27; Company: FinEdge; Role: Business Analyst; Email: sneha.iyer@example.com. Extract the fields.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-187",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Arjun Nair is a Operations Manager at GreenGrid Energy. Their age is 31 and their email is arjun.nair@example.com. Return the requested information.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-188",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Meera Kapoor, 29, meera.kapoor@example.com, PixelWorks, UX Designer. Produce the customer details.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-189",
+    "category": "onboarding",
+    "prompt": "During onboarding, Karan Malhotra provided their contact details. They are 34, work as a Security Engineer at SecureNet, and use karan.malhotra@example.com. Create the customer record.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-190",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Ishita Sen; Age: 25; Company: EduSphere; Role: Program Coordinator; Email: ishita.sen@example.com. Extract the fields.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  },
+  {
+    "id": "FG-191",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Aarav Mehta is a Data Analyst at Northstar Analytics. Their age is 28 and their email is aarav.mehta@example.com. Return the requested information.",
+    "expected": {
+      "name": "Aarav Mehta",
+      "age": 28,
+      "email": "aarav.mehta@example.com",
+      "company": "Northstar Analytics",
+      "role": "Data Analyst"
+    }
+  },
+  {
+    "id": "FG-192",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Priya Sharma, 32, priya.sharma@example.com, BluePeak Systems, Product Manager. Produce the customer details.",
+    "expected": {
+      "name": "Priya Sharma",
+      "age": 32,
+      "email": "priya.sharma@example.com",
+      "company": "BluePeak Systems",
+      "role": "Product Manager"
+    }
+  },
+  {
+    "id": "FG-193",
+    "category": "onboarding",
+    "prompt": "During onboarding, Rohan Das provided their contact details. They are 26, work as a Software Engineer at Vertex Labs, and use rohan.das@example.com. Create the customer record.",
+    "expected": {
+      "name": "Rohan Das",
+      "age": 26,
+      "email": "rohan.das@example.com",
+      "company": "Vertex Labs",
+      "role": "Software Engineer"
+    }
+  },
+  {
+    "id": "FG-194",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Ananya Roy; Age: 30; Company: CloudBridge Technologies; Role: Solutions Architect; Email: ananya.roy@example.com. Extract the fields.",
+    "expected": {
+      "name": "Ananya Roy",
+      "age": 30,
+      "email": "ananya.roy@example.com",
+      "company": "CloudBridge Technologies",
+      "role": "Solutions Architect"
+    }
+  },
+  {
+    "id": "FG-195",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Vikram Singh is a Sales Director at Apex Consulting. Their age is 35 and their email is vikram.singh@example.com. Return the requested information.",
+    "expected": {
+      "name": "Vikram Singh",
+      "age": 35,
+      "email": "vikram.singh@example.com",
+      "company": "Apex Consulting",
+      "role": "Sales Director"
+    }
+  },
+  {
+    "id": "FG-196",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Sneha Iyer, 27, sneha.iyer@example.com, FinEdge, Business Analyst. Produce the customer details.",
+    "expected": {
+      "name": "Sneha Iyer",
+      "age": 27,
+      "email": "sneha.iyer@example.com",
+      "company": "FinEdge",
+      "role": "Business Analyst"
+    }
+  },
+  {
+    "id": "FG-197",
+    "category": "onboarding",
+    "prompt": "During onboarding, Arjun Nair provided their contact details. They are 31, work as a Operations Manager at GreenGrid Energy, and use arjun.nair@example.com. Create the customer record.",
+    "expected": {
+      "name": "Arjun Nair",
+      "age": 31,
+      "email": "arjun.nair@example.com",
+      "company": "GreenGrid Energy",
+      "role": "Operations Manager"
+    }
+  },
+  {
+    "id": "FG-198",
+    "category": "onboarding",
+    "prompt": "New employee/customer onboarding information: Full name: Meera Kapoor; Age: 29; Company: PixelWorks; Role: UX Designer; Email: meera.kapoor@example.com. Extract the fields.",
+    "expected": {
+      "name": "Meera Kapoor",
+      "age": 29,
+      "email": "meera.kapoor@example.com",
+      "company": "PixelWorks",
+      "role": "UX Designer"
+    }
+  },
+  {
+    "id": "FG-199",
+    "category": "onboarding",
+    "prompt": "The onboarding specialist recorded that Karan Malhotra is a Security Engineer at SecureNet. Their age is 34 and their email is karan.malhotra@example.com. Return the requested information.",
+    "expected": {
+      "name": "Karan Malhotra",
+      "age": 34,
+      "email": "karan.malhotra@example.com",
+      "company": "SecureNet",
+      "role": "Security Engineer"
+    }
+  },
+  {
+    "id": "FG-200",
+    "category": "onboarding",
+    "prompt": "Process this onboarding note: Ishita Sen, 25, ishita.sen@example.com, EduSphere, Program Coordinator. Produce the customer details.",
+    "expected": {
+      "name": "Ishita Sen",
+      "age": 25,
+      "email": "ishita.sen@example.com",
+      "company": "EduSphere",
+      "role": "Program Coordinator"
+    }
+  }
+]
