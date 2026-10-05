@@ -1,459 +1,83 @@
+<div align="center">
+
 # Format Guard
 
-> **Make LLM output safe to consume.**
->
-> Validate structured AI output, automatically repair schema violations, retry with the model's own validation error, and return a typed object or a safe flagged failure.
+Validate and repair LLM output before your application depends on it.
 
-Format Guard is a Python library for the failure mode that appears everywhere when LLMs are connected to real software:
+</div>
 
-```text
-LLM response
-     ↓
-"Almost valid" JSON
-     ↓
-database / API / spreadsheet
-     ↓
-💥 validation error, bad data, or downstream failure
-```
-
-Format Guard puts a validation and repair layer between the model and the application:
-
-```text
-Raw LLM text
-     ↓
-JSON cleanup
-     ↓
-Pydantic schema validation
-     ↓
- ┌───────────────┐
- │ Valid output? │
- └───────┬───────┘
-       yes │ no
-           │
-           ▼
-      Repair prompt
-           │
-           ▼
-        LLM retry
-           │
-           ▼
-     Validate again
-           │
-     ┌─────┴─────┐
-     │           │
-   valid       failed
-     │           │
-     ▼           ▼
-Typed object   Flag / fallback
-```
-
-## Why Format Guard?
-
-LLMs are excellent at producing useful content, but production software usually needs something stricter:
-
-- an integer must actually be an integer
-- required fields cannot disappear
-- extra fields may need to be rejected
-- JSON must be parseable
-- downstream systems should not receive model prose around JSON
-- a failed response should be repairable without rebuilding the entire workflow
-- repeated failures should be observable
-- applications need a predictable success/failure contract
-
-Format Guard treats formatting and schema correctness as an engineering boundary rather than assuming the model will always obey instructions.
-
-## Features
-
-### Strict schema validation
-
-Use any Pydantic `BaseModel` as the contract between your LLM and application.
-
-### Automatic repair
-
-When validation fails, Format Guard builds a repair prompt containing the original request, invalid output, validation error, required JSON schema, and explicit repair instructions.
-
-### JSON cleanup
-
-Common formatting problems are normalized before validation:
-
-- Markdown JSON fences
-- generic Markdown code fences
-- trailing commas
-
-### Bounded retries
-
-Configure exactly how many repair attempts are allowed.
-
-```python
-guard(
-    schema=Customer,
-    llm_fn=llm,
-    prompt="Extract the customer details.",
-    max_retries=3,
-)
-```
-
-### Safe fallback
-
-If all retries fail, optionally return a predefined Pydantic object rather than leaving the application without a usable value.
-
-### Failure flagging
-
-Every exhausted validation flow is explicitly marked as:
-
-```python
-result.flagged is True
-```
-
-### Observability
-
-Results expose attempts, repairs, validation failures, repair rate, fallback usage, raw output, final output, and validation errors.
-
-### Provider-agnostic design
-
-The core guard accepts a simple callable:
-
-```python
-llm_fn(prompt: str) -> str
-```
-
-The validation layer therefore does not need to know whether the model is Groq, OpenAI, Gemini, a local model, or your own service.
-
-# Installation
-
-## From PyPI
+<!-- TODO: confirm PyPI publish -->
 
 ```bash
 pip install format-guard
 ```
 
-Then:
+<div align="center">
+
+<!-- TODO: confirm PyPI publish -->
+
+[![PyPI version](https://img.shields.io/pypi/v/format-guard)](https://pypi.org/project/format-guard/) · [![Python versions](https://img.shields.io/pypi/pyversions/format-guard)](https://pypi.org/project/format-guard/) · [![MIT license](https://img.shields.io/github/license/Mainak156/FormatGuard)](LICENSE) · [![Tests: 94 passed](https://img.shields.io/badge/tests-94%20passed-brightgreen)](tests/) · [![GitHub stars](https://img.shields.io/github/stars/Mainak156/FormatGuard)](https://github.com/Mainak156/FormatGuard/stargazers)
+
+</div>
+
+**Contents:** [Quick start](#quick-start) · [Features](#features) · [Benchmark](#benchmark-results) · [Integrations](#integrations) · [Contributing](#contributing) · [Roadmap](#roadmap) · [License](#license) · [Author](#author)
+
+## The problem
+
+LLMs can return information in a format your application cannot safely consume. For example, the model may return `"age": "twenty one"` when your schema requires an integer. Format Guard validates the response, asks the model to repair invalid output, and returns a typed object when validation succeeds.
+
+```json
+{"age": "twenty one"}
+```
+
+becomes:
 
 ```python
-from format_guard import guard
+Person(age=21)
 ```
 
-## Development installation
-
-```powershell
-git clone https://github.com/Mainak156/FormatGuard.git
-cd FormatGuard
-
-python -m venv .fguard
-.\.fguard\Scripts\Activate.ps1
-
-python -m pip install -e ".[dev]"
-```
-
-# Quick Start
+## Quick start
 
 ```python
 from pydantic import BaseModel
 from format_guard import guard
 
-
-class Customer(BaseModel):
-    name: str
+class Person(BaseModel):
     age: int
-    email: str
 
-
-def llm(prompt: str) -> str:
-    return """
-    {
-        "name": "Mainak",
-        "age": 21,
-        "email": "mainak@example.com"
-    }
-    """
-
-
-result = guard(
-    schema=Customer,
-    llm_fn=llm,
-    prompt="Extract the customer's name, age and email.",
-    max_retries=3,
-)
-
-if result.success:
-    customer = result.value
-    print(customer.name)
-else:
-    print("Validation failed:", result.error)
+responses = iter(['{"age":"twenty one"}', '{"age":21}'])
+result = guard(schema=Person, llm_fn=lambda _: next(responses),
+               prompt="Extract the person's age.", max_retries=1)
+print(result.value)
 ```
 
-# Repair Flow
+## How it works
 
-Suppose the first response is:
-
-```json
-{
-  "name": "Mainak",
-  "age": "twenty one",
-  "email": "mainak@example.com"
-}
+```mermaid
+flowchart TD
+    A[Raw LLM text] --> B[JSON cleanup]
+    B --> C[Pydantic schema validation]
+    C --> D{Valid output?}
+    D -->|Yes| E[Return typed object]
+    D -->|No, retries remain| F[Build repair prompt with validation error]
+    F --> G[Ask the LLM to retry]
+    G --> B
+    D -->|No retries remain| H[Flag failure or use fallback]
 ```
 
-The schema requires:
-
-```python
-age: int
-```
-
-Format Guard rejects the response and constructs a repair prompt containing the validation failure.
-
-The next model response can then be:
-
-```json
-{
-  "name": "Mainak",
-  "age": 21,
-  "email": "mainak@example.com"
-}
-```
-
-The result records that the output was repaired:
-
-```python
-result.success
-# True
-
-result.attempts
-# 2
-
-result.repaired
-# True
-
-result.flagged
-# False
-```
-
-# Fallbacks
-
-```python
-from format_guard import guard
-
-fallback = Customer(
-    name="Unknown",
-    age=0,
-    email="unknown@example.com",
-)
-
-result = guard(
-    schema=Customer,
-    llm_fn=llm,
-    prompt="Extract customer information.",
-    max_retries=2,
-    fallback=fallback,
-)
-
-if result.fallback_used:
-    print("Using safe fallback:", result.value)
-```
-
-# Metrics
-
-```python
-result.metrics.attempts
-result.metrics.repairs
-result.metrics.validation_failures
-result.metrics.repair_rate
-result.metrics.successful
-```
-
-Example:
-
-```text
-Attempts: 2
-Repairs: 1
-Validation failures: 1
-Repair rate: 50.00%
-Successful: True
-```
-
-# JSON Cleanup
-
-The deterministic cleanup layer handles:
-
-- ` ```json ... ``` `
-- ` ``` ... ``` `
-- trailing commas before `}` or `]`
-
-It does not attempt to silently rewrite arbitrary natural-language output into data. Invalid semantic output should reach the repair loop instead.
-
-# Groq Integration
-
-Install the optional Groq dependency:
-
-```powershell
-python -m pip install "format-guard[groq]"
-```
-
-Set:
-
-```env
-GROQ_API_KEY=your_key_here
-```
-
-Then:
-
-```python
-from format_guard import guard
-from format_guard.providers import GroqProvider
-from pydantic import BaseModel
-
-
-class Customer(BaseModel):
-    name: str
-    age: int
-    email: str
-
-
-provider = GroqProvider(
-    model="openai/gpt-oss-120b",
-)
-
-result = guard(
-    schema=Customer,
-    llm_fn=provider,
-    prompt="Extract the customer name, age and email as JSON.",
-    max_retries=3,
-)
-
-print(result.value if result.success else result.error)
-```
-
-# LangChain Structured Output
-
-Install:
-
-```powershell
-python -m pip install "format-guard[langchain]"
-```
-
-Then:
-
-```python
-from format_guard.providers import LangChainGroqProvider
-
-provider = LangChainGroqProvider(
-    model="openai/gpt-oss-120b",
-)
-
-customer = provider.generate_structured(
-    prompt="Extract customer information.",
-    schema=Customer,
-)
-
-print(customer)
-```
-
-This adapter is intentionally separate from the raw benchmark path. The benchmark measures the incremental effect of Format Guard rather than provider-native structured-output enforcement.
-
-# REST API
-
-Install:
-
-```powershell
-python -m pip install "format-guard[api]"
-```
-
-Start:
-
-```powershell
-uvicorn format_guard.api:app --reload
-```
-
-Health:
-
-```text
-GET /health
-```
-
-Validation:
-
-```text
-POST /validate
-```
-
-Example request:
-
-```json
-{
-  "prompt": "Extract customer information.",
-  "schema": {
-    "name": "string",
-    "age": "integer",
-    "email": "string"
-  },
-  "max_retries": 3,
-  "model": "openai/gpt-oss-120b"
-}
-```
-
-# Architecture
-
-```text
-format_guard/
-├── __init__.py
-├── core.py
-├── models.py
-├── cleaner.py
-├── repair.py
-├── exceptions.py
-├── api.py
-├── providers/
-│   ├── base.py
-│   ├── mock.py
-│   ├── groq.py
-│   └── langchain_groq.py
-└── benchmark/
-    ├── models.py
-    ├── providers.py
-    └── runner.py
-```
-
-The architecture separates core validation, provider adapters, the API layer, and benchmark/evaluation code.
-
-# Benchmark
-
-The benchmark compares:
-
-```text
-Raw LLM output
-       │
-       ├── BEFORE
-       │    └── schema validation
-       │
-       └── AFTER
-            └── Format Guard
-                 ├── validation
-                 ├── repair
-                 └── retry
-```
-
-## Dataset
-
-- 200 synthetic prompts
-- 5 categories
-- 40 prompts per category
-- CRM
-- Support
-- Sales
-- Meeting
-- Onboarding
-
-## Live benchmark models
-
-- GPT-OSS 120B
-- GPT-OSS 20B
-- Qwen 3.8 27B
-
-The benchmark architecture is provider-agnostic and can be extended with additional adapters.
-
-# Benchmark Results
-
-The completed live benchmark evaluated **200 prompts per model**, for **600 model/prompt evaluations**.
+## Features
+
+- 🧩 **Schema validation:** Use a Pydantic model as the contract for LLM output.
+- 🛠️ **Automatic repair:** Retry with the invalid output and validation error.
+- 🧹 **JSON cleanup:** Normalize Markdown code fences and trailing commas.
+- 🔁 **Bounded retries:** Choose how many repair attempts to allow.
+- 🛟 **Fallbacks:** Optionally return a predefined object after retries are exhausted.
+- 📊 **Observability:** Inspect attempts, repairs, validation failures, repair rate, and fallback usage.
+- 🔌 **Provider-agnostic:** Connect a provider with a callable that accepts a prompt and returns text.
+
+## Benchmark results
+
+In this benchmark, Format Guard raised valid output rates from 0–9% to 100% across the three tested models.
 
 | Model | Before | After | Improvement | Avg. Retries | Repair Rate | Flagged | Extra Cost |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -461,249 +85,87 @@ The completed live benchmark evaluated **200 prompts per model**, for **600 mode
 | GPT-OSS 20B | 9% | **100%** | **+91 pp** | 0.91 | 91% | 0 | $0.013078 |
 | Qwen 3.8 27B | 0% | **100%** | **+100 pp** | 1.00 | 100% | 0 | $0.115355 |
 
-### Interpretation
-
-On this benchmark, Format Guard increased schema-valid output from 0–9% to 100% for all three tested models.
-
-The improvement figures are **percentage-point changes**, not universal claims about model accuracy.
-
-Repairs introduce additional model calls and therefore additional token cost. Qwen 3.8 27B had the largest measured repair overhead in this run, while GPT-OSS 20B had the lowest.
-
-### Benchmark chart
-
 ![Format Guard — Valid Output Rate](benchmarks/results/format_guard_before_after.png)
 
-### Limitation
+> **Limitation:** These results are benchmark-specific. They should not be interpreted as a universal statement about the tested models on arbitrary production prompts. The benchmark intentionally evaluates raw responses before provider-native structured-output enforcement.
 
-These results are benchmark-specific. They should not be interpreted as a universal statement about the tested models on arbitrary production prompts. The benchmark intentionally evaluates raw responses before provider-native structured-output enforcement.
+## Integrations
 
-# Running the Benchmark
+<details>
+<summary>Groq</summary>
 
-Generate the dataset:
+Set `GROQ_API_KEY` in your environment and pass your Pydantic model as `YourModel`:
 
-```powershell
-python benchmarks\generate_dataset.py
+```python
+from format_guard import guard
+from format_guard.providers import GroqProvider
+
+provider = GroqProvider(model="openai/gpt-oss-120b")
+result = guard(schema=YourModel, llm_fn=provider,
+               prompt="Extract the requested information.", max_retries=3)
 ```
 
-Smoke test:
+</details>
 
-```powershell
-python benchmarks\smoke_test.py
+<details>
+<summary>LangChain structured output</summary>
+
+Pass your Pydantic model as `YourModel`:
+
+```python
+from format_guard.providers import LangChainGroqProvider
+
+provider = LangChainGroqProvider(model="openai/gpt-oss-120b")
+value = provider.generate_structured(prompt="Extract information.", schema=YourModel)
 ```
 
-Full checkpointed benchmark:
+</details>
+
+<details>
+<summary>REST API</summary>
+
+With the `[api]` extra installed, start the server:
+
+```bash
+uvicorn format_guard.api:app --reload
+```
+
+Endpoints: `GET /health` and `POST /validate`.
+
+</details>
+
+## Optional extras
+
+```bash
+pip install "format-guard[groq]"
+pip install "format-guard[langchain]"
+pip install "format-guard[api]"
+```
+
+## Contributing
+
+```powershell
+git clone https://github.com/Mainak156/FormatGuard.git
+cd FormatGuard
+python -m venv .fguard
+.\.fguard\Scripts\Activate.ps1
+python -m pip install -e ".[dev]"
+python -m pytest -v
+```
+
+Please add tests for behavioral changes.
+
+<details>
+<summary>Run the benchmark</summary>
 
 ```powershell
 python benchmarks\run_full_benchmark.py
-```
-
-Generate report and chart:
-
-```powershell
 python benchmarks\generate_report.py
 ```
 
-Results:
+</details>
 
-```text
-benchmarks/
-└── results/
-    ├── groq_full_benchmark.json
-    └── format_guard_before_after.png
-```
-
-# Testing
-
-Current test status:
-
-```text
-94 passed in 2.33s
-```
-
-Run:
-
-```powershell
-python -m pytest -v
-```
-
-Coverage includes:
-
-- public API
-- validation
-- retries
-- repair prompts
-- fallback behavior
-- JSON cleanup
-- provider adapters
-- Groq integration
-- LangChain integration
-- benchmark engine
-- benchmark dataset
-- provider cost tracking
-- observability metrics
-- REST API
-
-# Public API
-
-```python
-from format_guard import (
-    FormatGuard,
-    guard,
-    GuardMetrics,
-    ValidationResult,
-)
-```
-
-Important `ValidationResult` fields:
-
-```python
-result.success
-result.value
-result.attempts
-result.repaired
-result.error
-result.raw_output
-result.final_output
-result.flagged
-result.fallback_used
-result.metrics
-```
-
-# Use Cases
-
-- Database ingestion
-- CRM updates
-- Spreadsheet automation
-- REST/API payload generation
-- Document field extraction
-- Agent tool-call validation
-- Structured classification pipelines
-
-Typical boundary:
-
-```text
-LLM → Pydantic validation → application
-```
-
-# Design Principles
-
-1. **Validation belongs outside the model.** Prompting alone should not be the application's only safety mechanism.
-2. **Fail explicitly.** Failed output should be represented as failure rather than silently converted into questionable data.
-3. **Retry with context.** Repair attempts receive the original request, invalid output, validation error, and schema.
-4. **Keep providers replaceable.** The core guard should not depend on one LLM vendor.
-5. **Measure reliability.** Repair frequency, attempts, and cost should be observable.
-6. **Prefer deterministic preprocessing.** Simple JSON cleanup happens before another model call.
-
-# Project Structure
-
-```text
-FormatGuard/
-├── benchmarks/
-│   ├── data/
-│   │   └── customer_prompts.json
-│   ├── results/
-│   │   ├── groq_full_benchmark.json
-│   │   └── format_guard_before_after.png
-│   ├── generate_dataset.py
-│   ├── generate_report.py
-│   ├── run_full_benchmark.py
-│   └── smoke_test.py
-├── examples/
-│   ├── benchmark_demo.py
-│   ├── groq_example.py
-│   └── langchain_structured_example.py
-├── src/
-│   └── format_guard/
-│       ├── __init__.py
-│       ├── api.py
-│       ├── cleaner.py
-│       ├── core.py
-│       ├── exceptions.py
-│       ├── models.py
-│       ├── repair.py
-│       ├── benchmark/
-│       │   ├── __init__.py
-│       │   ├── models.py
-│       │   ├── providers.py
-│       │   └── runner.py
-│       └── providers/
-│           ├── __init__.py
-│           ├── base.py
-│           ├── groq.py
-│           ├── langchain_groq.py
-│           └── mock.py
-├── tests/
-├── .env.example
-├── .gitignore
-├── pyproject.toml
-├── README.md
-└── LICENSE
-```
-
-# Environment
-
-`.env.example`:
-
-```env
-GROQ_API_KEY=
-```
-
-Never commit `.env` or API keys.
-
-# PyPI
-
-The distribution name is:
-
-```text
-format-guard
-```
-
-The Python import name is:
-
-```python
-format_guard
-```
-
-After configuring the package metadata:
-
-```powershell
-python -m pip install --upgrade build twine
-python -m pytest -v
-python -m build
-python -m twine check dist/*
-```
-
-Then publish:
-
-```powershell
-python -m twine upload dist/*
-```
-
-For GitHub-hosted production releases, PyPI Trusted Publishing through GitHub Actions is preferred over storing a long-lived API token locally.
-
-# Roadmap
-
-## Completed
-
-- [x] Pydantic schema validation
-- [x] JSON cleanup
-- [x] Automatic repair loop
-- [x] Bounded retries
-- [x] Safe fallback
-- [x] Failure flagging
-- [x] Metrics
-- [x] Provider abstraction
-- [x] Groq provider
-- [x] LangChain structured-output adapter
-- [x] FastAPI `/validate`
-- [x] 200-prompt synthetic benchmark
-- [x] Checkpointed benchmark runner
-- [x] Token/cost tracking
-- [x] 3-model live benchmark
-- [x] Before/after visualization
-- [x] 94 automated tests
-
-## Next
+## Roadmap
 
 - [ ] Add more independent LLM providers
 - [ ] Reach the roadmap target of 6+ LLMs
@@ -714,35 +176,16 @@ For GitHub-hosted production releases, PyPI Trusted Publishing through GitHub Ac
 - [ ] Publish stable releases to PyPI
 - [ ] Integrate Format Guard into larger agent workflows
 
-# Contributing
+## License
 
-```powershell
-git clone https://github.com/Mainak156/FormatGuard.git
-cd FormatGuard
+MIT License. See [LICENSE](LICENSE).
 
-python -m venv .fguard
-.\.fguard\Scripts\Activate.ps1
-
-python -m pip install -e ".[dev]"
-python -m pytest -v
-```
-
-Please add tests for behavioral changes.
-
-# License
-
-MIT License. See `LICENSE`.
-
-# Author
+## Author
 
 **Mainak Sen**
 
 AI/ML Developer focused on LLM applications, agent reliability, evaluation, and production-oriented AI systems.
 
-GitHub: https://github.com/Mainak156
+GitHub: [Mainak156](https://github.com/Mainak156)
 
-LinkedIn: https://www.linkedin.com/in/techmainak001
-
----
-
-> **Format Guard turns unreliable LLM formatting into a validated application contract.**
+LinkedIn: [techmainak001](https://www.linkedin.com/in/techmainak001)
